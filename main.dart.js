@@ -57392,17 +57392,25 @@ return a.toUpperCase()}}
 R.Q3.prototype={
 kb(a){var s
 if(a.length!==15)return!1
-s=P.dv("^[0-9]{2}[A-Z]{5}[0-9]{4}[A-Z]{1}[1-9A-Z]{1}Z[0-9A-Z]{1}$",!0)
+s=P.dv("^[0-9]{2}[A-Za-z]{5}[0-9]{4}[A-Za-z]{1}[1-9A-Za-z]{1}(Z|z)[0-9A-Za-z]{1}$",!0)
 if(s.b.test(a))return this.Zk(a)
 return!1},
-Zk(a){var s,r,q,p=C.c.bo(a,a.length-1),o=C.c.M(a,0,14),n=t.t,m=H.a([],n),l=H.a([],n),k=H.a([],n),j=o.split("")
-for(s=0;s<j.length;++s){n=P.dv("^[0-9]+$",!0)
-r=j[s]
-if(n.b.test(r))m.push(P.dl(r,null))
-else m.push(C.c.ag(o,s)-55)}for(s=0;s<m.length;++s)l.push(m[s]*(C.f.dM(s,2)+1))
-for(s=0;s<l.length;++s){n=l[s]
-k.push(C.d.dd(n/36+C.f.dM(n,36)))}q=36-C.f.dM(C.b.lC(k,0,new R.Q4()),36)
-return(q<10?C.f.i(q):H.bv(q+55))===p}}
+Zk(a){var s,r,q,p,o,n,m,l,k,j
+a=a.toUpperCase()
+s=C.c.bo(a,a.length-1)
+r=C.c.M(a,0,14)
+q=t.t
+p=H.a([],q)
+o=H.a([],q)
+n=H.a([],q)
+m=r.split("")
+for(l=0;l<m.length;++l){q=P.dv("^[0-9]+$",!0)
+k=m[l]
+if(q.b.test(k))p.push(P.dl(k,null))
+else p.push(C.c.ag(r,l)-55)}for(l=0;l<p.length;++l)o.push(p[l]*(C.f.dM(l,2)+1))
+for(l=0;l<o.length;++l){q=o[l]
+n.push(C.d.dd(q/36+C.f.dM(q,36)))}j=36-C.f.dM(C.b.lC(n,0,new R.Q4()),36)
+return(j<10?C.f.i(j):H.bv(j+55))===s}}
 R.Q4.prototype={
 $2(a,b){return a+b},
 $S:78}
